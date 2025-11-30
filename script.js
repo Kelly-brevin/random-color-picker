@@ -1,6 +1,6 @@
 class DisplayEl {
   constructor() {
-    this.hexValue = Document.getElementById("hex-value");
+    this.hexValue = document.getElementById("hex-value");
   }
 
   placeholder() {
@@ -9,5 +9,8 @@ class DisplayEl {
     }
   }
 }
+//create an instance
+const displayEl = new DisplayEl();
+//cal
 
-const DisplayEl = new DisplayEl();
+//call the method
