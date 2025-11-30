@@ -4,3 +4,8 @@ body {
   align-items: center;
   height: 100vh;
 }
+#hex-value {
+  color: gray;
+  font-style: italic;
+  font-size: 3rem;
+}
