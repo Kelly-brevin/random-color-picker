@@ -14,7 +14,6 @@ class DisplayEl {
 }
 //create an instance
 const displayEl = new DisplayEl();
-//cal
 
 //call the method
 displayEl.placeholder();
