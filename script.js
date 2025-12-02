@@ -1,6 +1,11 @@
 class DisplayEl {
   constructor() {
     this.hexValue = document.getElementById("hex-value");
+    this.placeHolder();
+    this.clickEvent = this.clickEvent.bind(this);
+
+    //Listen for space bar clicks
+    this.clickEvent();
   }
   //create a placeholder that prompts the user to click.
   placeHolder() {
@@ -13,17 +18,22 @@ class DisplayEl {
   //listener is set to the whole page. An event object will be returned with info as to what key was pressed
   clickEvent() {
     document.addEventListener("keydown", (e) => {
-      if (e.key === "") {
+      if (e.key === " ") {
         //call the method with the random color logic
+        const color = this.randomColor();
+        document.body.style.backgroundColor = color;
       }
     });
   }
   randomColor() {
     const values = [];
     for (let i = 0; i < 3; i++) {
-      values.push(Math.floor(Math.random() * 255));
+      values.push(Math.floor(Math.random() * 256));
     }
-    console.log(values);
+    let hex =
+      "#" + values.map((num) => num.toString(16).padStart(2, "0")).join("");
+
+    return hex;
   }
 }
 
@@ -32,4 +42,4 @@ class DisplayEl {
 const displayEl = new DisplayEl();
 
 //call the method
-displayEl.randomColor();
+// displayEl();
