@@ -21,7 +21,11 @@ class DisplayEl {
       if (e.key === " ") {
         //call the method with the random color logic
         const color = this.randomColor();
+
+        //set the background color of the page
         document.body.style.backgroundColor = color;
+
+        //replace the placeholder text with the hex value
         this.hexValue.innerText = color;
       }
     });
@@ -38,9 +42,4 @@ class DisplayEl {
   }
 }
 
-//Logic to generate  random HEX values,store them in a variable
-
 const displayEl = new DisplayEl();
-
-//call the method
-// displayEl();
