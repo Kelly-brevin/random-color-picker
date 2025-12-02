@@ -22,6 +22,7 @@ class DisplayEl {
         //call the method with the random color logic
         const color = this.randomColor();
         document.body.style.backgroundColor = color;
+        this.hexValue.innerText = color;
       }
     });
   }
